@@ -33,8 +33,7 @@ export default function BookNow() {
   }, []); // Empty dependency array means this effect runs once on mount
 
   const handleSubmit = async (e) => {
-  const em=window.localStorage.getItem("email")
-  console.log("%%%%%%%%%%%%%%%%%%%%%:"+em);
+  const email=window.localStorage.getItem("email")
     e.preventDefault();
     if ( !date || !transportation || !duration || !number) {
       alert("Please fill in all required fields.");
@@ -49,8 +48,7 @@ export default function BookNow() {
       number,
       page,
     });
-    console.log("\n\n\n...."+em);
-    if(em!=""){
+    if(email!==null){
       navigate(`/payforbook?destination=${places[selectedPlace].name}&date=${date}&transportation=${transportation}&duration=${duration}&number=${number}`);
     }
     else{

@@ -27,7 +27,7 @@ const Navigation = () => {
           <button>Add Place</button>
         </NavLink>
         <NavLink  to="/see_packages" activeClassName="active">
-        <button>Available Packages</button>
+        <button>Mange Packages</button>
         </NavLink>
         <NavLink to="/insert_price" activeClassName="active">
         <button>Insert Price</button>
